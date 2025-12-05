@@ -1,11 +1,13 @@
-Awesome Public Datasets
+Holiday Game
+
+
 =======================
 
-Squid Game inspired lineup
--------------------------
+Holiday game helper
+-------------------
 
 Use ``index.html`` to open the interactive lineup builder in your browser. You can upload
-your own photos (or paste image URLs) and click a card to darken it when a challenger is
+your own photos (or paste image URLs) and click a card to dim it when someone is
 eliminated. A "Reset all" button brings everyone back into play.
 
 Quick start (local testing)
