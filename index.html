@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holiday Game Lineup</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Holiday Game Helper</p>
+        <h1>Build your lineup and mark players as they're eliminated.</h1>
+        <p class="lede">Add photos for friends, family, or coworkers, then click a card to dim it when someone is out.</p>
+      </div>
+    </header>
+
+    <section class="panel">
+      <h2>Add a participant</h2>
+      <form id="addParticipant" class="add-form" autocomplete="off">
+        <label class="field">
+          <span>Name</span>
+          <input id="participantName" name="name" type="text" required placeholder="e.g. Sam W." />
+        </label>
+        <label class="field">
+          <span>Photo (upload a picture)</span>
+          <input id="participantPhoto" name="photo" type="file" accept="image/*" />
+          <span class="help-text">You can skip the upload and we'll make a colorful placeholder for you.</span>
+        </label>
+        <label class="field">
+          <span>Or paste an image URL</span>
+          <input id="participantPhotoUrl" name="photoUrl" type="url" placeholder="https://example.com/photo.jpg" />
+        </label>
+        <button class="primary" type="submit">Add to lineup</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <div>
+          <p class="eyebrow">Lineup</p>
+          <h2>Click a person to toggle eliminated</h2>
+        </div>
+        <div class="actions">
+          <button id="resetEliminations" type="button" class="secondary">Reset all</button>
+        </div>
+      </div>
+      <div id="participantGrid" class="grid" aria-live="polite"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
