@@ -1,6 +1,28 @@
 Awesome Public Datasets
 =======================
 
+Squid Game inspired lineup
+-------------------------
+
+Use ``index.html`` to open the interactive lineup builder in your browser. You can upload
+your own photos (or paste image URLs) and click a card to darken it when a challenger is
+eliminated. A "Reset all" button brings everyone back into play.
+
+Quick start (local testing)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#. From the repository root, start a simple web server so file uploads work reliably:
+
+   .. code-block:: bash
+
+      python -m http.server 8000
+
+#. Open your browser to ``http://localhost:8000`` and load ``index.html``.
+#. Add names, upload images (or paste URLs), and click cards to toggle the "eliminated" state.
+#. Use the "Reset all" button to clear all eliminations and start a new round.
+
+---
+
 `This list of public data sources <https://github.com/caesar0301/awesome-public-datasets>`_
 are collected and tidyed from blogs, answers, and user reponses.
 Most of the data sets listed below are free, however, some are not.
