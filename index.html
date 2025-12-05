@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Holiday Game Lineup</title>
+  <title>Squid Game Lineup</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <main class="page">
     <header class="hero">
       <div>
-        <p class="eyebrow">Holiday Game Helper</p>
-        <h1>Build your lineup and mark players as they're eliminated.</h1>
-        <p class="lede">Add photos for friends, family, or coworkers, then click a card to dim it when someone is out.</p>
+        <p class="eyebrow">Squid Game Inspired</p>
+        <h1>Create your lineup and eliminate challengers.</h1>
+        <p class="lede">Add players with photos or use placeholders, then click a card to mark someone out of the running.</p>
+        <div class="symbol-row" aria-hidden="true">
+          <span class="symbol circle"></span>
+          <span class="symbol triangle"></span>
+          <span class="symbol square"></span>
+        </div>
       </div>
     </header>
 
@@ -40,7 +45,7 @@
       <div class="panel-header">
         <div>
           <p class="eyebrow">Lineup</p>
-          <h2>Click a person to toggle eliminated</h2>
+          <h2>Tap a challenger to toggle elimination</h2>
         </div>
         <div class="actions">
           <button id="resetEliminations" type="button" class="secondary">Reset all</button>

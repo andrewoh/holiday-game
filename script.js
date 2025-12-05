@@ -3,12 +3,12 @@ const form = document.getElementById('addParticipant');
 const resetButton = document.getElementById('resetEliminations');
 
 const demoParticipants = [
-  { name: 'Alex Rivers', photo: makePlaceholder('Alex Rivers', ['#0ea5e9', '#7c3aed']) },
-  { name: 'Jessie Moore', photo: makePlaceholder('Jessie Moore', ['#22c55e', '#0ea5e9']) },
-  { name: 'Priya Patel', photo: makePlaceholder('Priya Patel', ['#f97316', '#ef4444']) },
+  { name: 'Player 067', photo: makePlaceholder('Player 067', ['#ff2dac', '#00f7c2']) },
+  { name: 'Player 456', photo: makePlaceholder('Player 456', ['#00f7c2', '#7b2cff']) },
+  { name: 'Player 218', photo: makePlaceholder('Player 218', ['#ff2dac', '#ff4d6d']) },
 ];
 
-function makePlaceholder(name, colors = ['#7dd3fc', '#a855f7']) {
+function makePlaceholder(name, colors = ['#ff2dac', '#00f7c2']) {
   const initials = name
     .split(/\s+/)
     .filter(Boolean)
