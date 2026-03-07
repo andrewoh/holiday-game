@@ -3,57 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Squid Game Lineup</title>
+  <title>Puzzle Fighter Arena</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="page">
+  <main class="game-shell">
     <header class="hero">
-      <div>
-        <p class="eyebrow">Squid Game Inspired</p>
-        <h1>Create your lineup and eliminate challengers.</h1>
-        <p class="lede">Add players with photos or use placeholders, then click a card to mark someone out of the running.</p>
-        <div class="symbol-row" aria-hidden="true">
-          <span class="symbol circle"></span>
-          <span class="symbol triangle"></span>
-          <span class="symbol square"></span>
-        </div>
-      </div>
+      <p class="eyebrow">Arcade Duel</p>
+      <h1>Puzzle Fighter Arena</h1>
+      <p>Swap adjacent gems to make 3+ matches, build combos, and knock out your rival.</p>
     </header>
 
-    <section class="panel">
-      <h2>Add a participant</h2>
-      <form id="addParticipant" class="add-form" autocomplete="off">
-        <label class="field">
-          <span>Name</span>
-          <input id="participantName" name="name" type="text" required placeholder="e.g. Sam W." />
-        </label>
-        <label class="field">
-          <span>Photo (upload a picture)</span>
-          <input id="participantPhoto" name="photo" type="file" accept="image/*" />
-          <span class="help-text">You can skip the upload and we'll make a colorful placeholder for you.</span>
-        </label>
-        <label class="field">
-          <span>Or paste an image URL</span>
-          <input id="participantPhotoUrl" name="photoUrl" type="url" placeholder="https://example.com/photo.jpg" />
-        </label>
-        <button class="primary" type="submit">Add to lineup</button>
-      </form>
+    <section class="hud">
+      <article class="fighter player">
+        <h2>You</h2>
+        <div class="bar"><span id="playerHpBar"></span></div>
+        <p><strong id="playerHp">100</strong> HP</p>
+      </article>
+
+      <article class="fighter enemy">
+        <h2>Rival</h2>
+        <div class="bar"><span id="enemyHpBar"></span></div>
+        <p><strong id="enemyHp">100</strong> HP</p>
+      </article>
     </section>
 
-    <section class="panel">
-      <div class="panel-header">
-        <div>
-          <p class="eyebrow">Lineup</p>
-          <h2>Tap a challenger to toggle elimination</h2>
-        </div>
-        <div class="actions">
-          <button id="resetEliminations" type="button" class="secondary">Reset all</button>
-        </div>
+    <section class="board-panel">
+      <div id="board" class="board" aria-label="Puzzle board"></div>
+      <div class="controls">
+        <p id="status" aria-live="polite">Make a move!</p>
+        <p class="small">Damage: matches deal 8 × combo level. Rival counters after your turn.</p>
+        <button id="restart" type="button">Restart Match</button>
       </div>
-      <div id="participantGrid" class="grid" aria-live="polite"></div>
     </section>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
